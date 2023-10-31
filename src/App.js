@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
       <MyComp />
       <MyComp />
       <MyComp />
@@ -10,7 +10,19 @@ function App() {
 
 function MyComp() {
   const name = "흥민";
-  return <div>{name}</div>;
+  return (
+    <div
+      style={{
+        backgroundColor: "blue",
+        color: "white",
+        padding: "10px",
+        width: "25%",
+        textAlign: "center",
+      }}
+    >
+      {name}
+    </div>
+  );
 }
 
 export default App;
