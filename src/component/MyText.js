@@ -1,3 +1,4 @@
+import "../style/mystyle.css";
 export function MyText() {
   return (
     <div>
