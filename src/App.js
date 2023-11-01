@@ -1,5 +1,16 @@
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <MyText
+        style={{ color: "blue", border: "5px solid gold" }}
+        value="hello"
+      />
+      <MyText
+        style={{ color: "red", border: "5px dotted yellow" }}
+        value="안녕하세요."
+      />
+    </div>
+  );
 }
 
 function MyText(props) {
