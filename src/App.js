@@ -1,8 +1,11 @@
-
 function App() {
-  return (
-    <div>
+  return <div></div>;
+}
 
+function MyText(props) {
+  return (
+    <div style={props.style}>
+      <p>{props.value}</p>
     </div>
   );
 }
