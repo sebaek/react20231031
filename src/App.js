@@ -1,3 +1,17 @@
+function MyComp({
+  m = "5px",
+  p = "7px",
+  color = "blue",
+  bg = "white",
+  text = "no content",
+}) {
+  return (
+    <div style={{ margin: m, padding: p, backgroundColor: bg, color: color }}>
+      <p>{text}</p>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
