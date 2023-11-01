@@ -1,22 +1,16 @@
-import {
-  MyBox,
-  MyContainer,
-  MyElem,
-  name,
-  address,
-  person,
-} from "./component/MyBox";
+import aaggee, { city } from "./component/MyElem";
+import MyContainer, { person, country } from "./component/MyBox";
 
 function App() {
-  console.log("name", name);
-  console.log("address", address);
-  console.log("person", person);
-
   return (
     <>
-      <MyBox />
-      <MyElem />
+      <h1>{city}</h1>
+      <h1>{aaggee}</h1>
       <MyContainer />
+      <h1>
+        {person.age}, {person.name}
+      </h1>
+      <h1>{country}</h1>
     </>
   );
 }
