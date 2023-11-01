@@ -1,18 +1,9 @@
-// named export
-export function MyElem() {
+export default function MyElem() {
   return (
     <div>
-      <h1>MY ELEMENT</h1>
+      <h1>THIS IS MY ELEM</h1>
     </div>
   );
 }
 
-// named export
-export const city = "seoul";
-
-const age = 33;
-
-// default export
-// 이름은 정해져 있지 않음
-// 한 파일에 하나만 가능
-export default age;
+export const address = "강남";
