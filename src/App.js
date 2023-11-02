@@ -1,37 +1,50 @@
-import { Button, useToast } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { ArrowRightIcon, EmailIcon } from "@chakra-ui/icons";
 
 function App() {
-  const toast = useToast();
-
   return (
     <>
-      <Button
-        onClick={() =>
-          toast({
-            title: "저장 완료",
-            description: "게시물이 저장되었습니다.",
-            duration: 2000,
-            position: "top",
-            isClosable: true,
-          })
-        }
-      >
-        토스트 띄우기
+      <Button colorScheme="blue">Lorem.</Button>
+      <Button colorScheme="red">Lorem.</Button>
+      <Button colorScheme="yellow">Numquam!</Button>
+      <Button colorScheme="orange">Eligendi.</Button>
+      <Button colorScheme="teal" size={"sm"}>
+        Dolorum.
       </Button>
-      <Button
-        onClick={() =>
-          toast({
-            title: "저장 실패",
-            description: "게시물이 저장되지 않았습니다.",
-            duration: 2000,
-            position: "top",
-            isClosable: true,
-            status: "error",
-          })
-        }
-      >
-        토스트 띄우기
+      <Button colorScheme="messenger" size={"lg"}>
+        Nesciunt.
       </Button>
+      <Button colorScheme="telegram" variant="outline">
+        Impedit?
+      </Button>
+      <Button colorScheme="orange" variant="ghost">
+        Magni.
+      </Button>
+      <Button variant="link">Quos.</Button>
+      <Button leftIcon={<EmailIcon />}>Quos!</Button>
+      <Button rightIcon={<ArrowRightIcon />}>Optio.</Button>
+      <Button isLoading>Temporibus!</Button>
+      <Button isLoading loadingText="전송중">
+        Quae.
+      </Button>
+      <Button>Dolor.</Button>
+      <Button>Debitis.</Button>
+      <Button>Pariatur!</Button>
+      <Button>Explicabo!</Button>
+      <Button>Unde.</Button>
+      <Button>Possimus!</Button>
+      <Button>Delectus?</Button>
+      <Button>Neque?</Button>
+      <Button>Facilis.</Button>
+      <Button>Quaerat.</Button>
+      <Button>Architecto?</Button>
+      <Button>Ab?</Button>
+      <Button>Autem?</Button>
+      <Button>Amet?</Button>
+      <Button>Id.</Button>
+      <Button>Corporis.</Button>
+      <Button>Omnis.</Button>
+      <Button>Eveniet?</Button>
     </>
   );
 }
