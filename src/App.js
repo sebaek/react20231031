@@ -65,6 +65,51 @@ function App() {
             </Tbody>
           </Table>
         </Box>
+        {/*Box>Table[variant=striped]>Thead>Tr>Th*4>lorem1^^^Tbody>Tr*5>Td*4>lorem1*/}
+        <Box>
+          <Table variant="striped" colorScheme="red" size="lg">
+            <Thead>
+              <Tr>
+                <Th>Lorem.</Th>
+                <Th>Minima.</Th>
+                <Th>Provident?</Th>
+                <Th>Consequuntur?</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>In.</Td>
+                <Td>Eos.</Td>
+                <Td>Id!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Voluptate.</Td>
+                <Td>Aliquid!</Td>
+                <Td>Delectus!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Repudiandae!</Td>
+                <Td>Accusamus!</Td>
+                <Td>Optio!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Facere?</Td>
+                <Td>Tenetur.</Td>
+                <Td>Delectus?</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Mollitia!</Td>
+                <Td>Deleniti.</Td>
+                <Td>Minima.</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </Box>
       </SimpleGrid>
     </>
   );
