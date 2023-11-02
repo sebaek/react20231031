@@ -73,7 +73,7 @@ function App() {
                 <Th>Lorem.</Th>
                 <Th>Minima.</Th>
                 <Th>Provident?</Th>
-                <Th>Consequuntur?</Th>
+                <Th isNumeric>Consequuntur?</Th>
               </Tr>
             </Thead>
             <Tbody>
@@ -81,31 +81,31 @@ function App() {
                 <Td>Lorem.</Td>
                 <Td>In.</Td>
                 <Td>Eos.</Td>
-                <Td>Id!</Td>
+                <Td isNumeric>Id!</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
                 <Td>Voluptate.</Td>
                 <Td>Aliquid!</Td>
-                <Td>Delectus!</Td>
+                <Td isNumeric>Delectus!</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
                 <Td>Repudiandae!</Td>
                 <Td>Accusamus!</Td>
-                <Td>Optio!</Td>
+                <Td isNumeric>Optio!</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
                 <Td>Facere?</Td>
                 <Td>Tenetur.</Td>
-                <Td>Delectus?</Td>
+                <Td isNumeric>Delectus?</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
                 <Td>Mollitia!</Td>
                 <Td>Deleniti.</Td>
-                <Td>Minima.</Td>
+                <Td isNumeric>Minima.</Td>
               </Tr>
             </Tbody>
           </Table>
