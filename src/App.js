@@ -1,46 +1,37 @@
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Button, useToast } from "@chakra-ui/react";
 
 function App() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
 
   return (
     <>
-      <Button onClick={onOpen}>모달 열기</Button>
-
-      <Modal
-        closeOnOverlayClick={false}
-        isOpen={isOpen}
-        onClose={onClose}
-        isCentered
-        motionPreset="slideInBottom"
+      <Button
+        onClick={() =>
+          toast({
+            title: "저장 완료",
+            description: "게시물이 저장되었습니다.",
+            duration: 2000,
+            position: "top",
+            isClosable: true,
+          })
+        }
       >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>모달의 제목</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            aperiam, architecto aspernatur dolorum ex exercitationem, expedita
-            fuga laborum magni molestiae officiis optio porro possimus quae quod
-            vitae voluptatem! Ipsum, officia!
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" onClick={onClose}>
-              닫기
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+        토스트 띄우기
+      </Button>
+      <Button
+        onClick={() =>
+          toast({
+            title: "저장 실패",
+            description: "게시물이 저장되지 않았습니다.",
+            duration: 2000,
+            position: "top",
+            isClosable: true,
+            status: "error",
+          })
+        }
+      >
+        토스트 띄우기
+      </Button>
     </>
   );
 }
