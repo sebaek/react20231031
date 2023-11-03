@@ -1,23 +1,16 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 
 function App(props) {
-  // 브라우저는 이벤트 핸들러 메소드에
-  // event 객체를 매개값으로 넣어줌
-  function handleClick(event) {
-    // console.log(event);
-    console.log(event.target);
-    // console.log(event.target.className);
-    // console.log(event.target.type);
+  function handleChange(e) {
+    // console.log("인풋값이 변경됨");
+    console.log(e.target.value);
   }
+
   return (
     <div>
-      <Button colorScheme="orange" onClick={handleClick}>
-        button1
-      </Button>
-      <Button colorScheme="blue" onClick={handleClick}>
-        button2
-      </Button>
+      <Input onChange={handleChange} />
+      <Input onChange={handleChange} />
     </div>
   );
 }
