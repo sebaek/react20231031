@@ -5,7 +5,7 @@ function App() {
     e.preventDefault();
     window.location.href = "https://www.naver.com";
   }
-``
+  ``;
   return (
     <>
       <a href="https://www.daum.net" onClick={handleClick}>
