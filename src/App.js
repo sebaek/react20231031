@@ -6,7 +6,7 @@ function App(props) {
 
   function handleClick() {
     // number++;
-    setNumber(number);
+    setNumber(number + 1);
   }
   return (
     <div>
