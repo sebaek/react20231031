@@ -9,8 +9,14 @@ function App(props) {
   const [numberObject, setNumberObject] = useState({ number: 0 });
 
   function handleNumberObjectChange() {
-    numberObject.number = numberObject.number + 1;
-    setNumberObject(numberObject);
+    // 이렇게 사용하면 안됨
+    // numberObject.number = numberObject.number + 1;
+    // setNumberObject(numberObject);
+
+    // 복사해서 써야함
+    const newNumberObject = { ...numberObject };
+    newNumberObject.number = newNumberObject.number + 1;
+    setNumberObject(newNumberObject);
   }
 
   return (
