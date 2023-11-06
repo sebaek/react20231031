@@ -1,7 +1,19 @@
 import { Box, Button, Input, ListItem, UnorderedList } from "@chakra-ui/react";
+import { useState } from "react";
 
 function App() {
   // 필요한 코드들 작성
+  const [text, setText] = useState("");
+  const [items, setItems] = useState([]);
+
+  function handleButtonClick() {
+    setItems([...items, text]);
+  }
+
+  function handleRemoveButtonClick(index) {
+    setItems(items.filter((item, i) => i != index));
+  }
+
   return (
     <>
       <Box>
