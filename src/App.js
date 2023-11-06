@@ -5,8 +5,14 @@ function App() {
   const [items, setItems] = useState([]);
 
   function handleButtonClick(item) {
-    console.log(item);
     // items의 상태를 item을 추가하도록 변경
+    // const nextItems = [...items];
+    // nextItems.push(item);
+
+    // const nextItems = [...items, item];
+    // setItems(nextItems);
+
+    setItems([...items, item]);
   }
 
   return (
