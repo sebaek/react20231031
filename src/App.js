@@ -6,8 +6,10 @@ function App() {
   const [obj, setObj] = useState({ message: "" });
 
   function handleObjectMessageChange(e) {
-    obj.message = e.target.value;
-    setObj(obj);
+    // const newObj = { ...obj };
+    // newObj.message = e.target.value;
+    // setObj(newObj);
+    setObj({ ...obj, message: e.target.value });
   }
 
   return (
