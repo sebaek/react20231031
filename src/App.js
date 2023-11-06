@@ -1,20 +1,25 @@
 import React, { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 
 function App(props) {
-  const [text, setText] = useState("hello");
+  const [number, setNumber] = useState(0);
 
-  console.log(text);
+  console.log(number);
 
-  function handleButtonClick() {
-    // text 라는 state 값 변경
-    setText("greeting");
-  }
+  const index = number % 3;
 
   return (
     <div>
-      <Button onClick={handleButtonClick}>상태 변경!</Button>
-      <p>{text}</p>
+      <Button onClick={() => setNumber(number + 1)}>다음</Button>
+      <Box borderWidth={"3px"} borderColor={index == 0 ? "blue" : "black"}>
+        <Text>message1</Text>
+      </Box>
+      <Box borderWidth={"3px"} borderColor={index == 1 ? "blue" : "black"}>
+        <Text>message2</Text>
+      </Box>
+      <Box borderWidth={"3px"} borderColor={index == 2 ? "blue" : "black"}>
+        <Text>message3</Text>
+      </Box>
     </div>
   );
 }
