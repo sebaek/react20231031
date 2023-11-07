@@ -3,13 +3,9 @@ import * as PropTypes from "prop-types";
 import { Box, Input, Text } from "@chakra-ui/react";
 
 function MyInput({ address, onChange }) {
-  function handleInputChange(e) {
-    onChange(e.target.value);
-  }
-
   return (
     <Box>
-      <Input value={address} onChange={handleInputChange} />
+      <Input value={address} onChange={(e) => onChange(e.target.value)} />
     </Box>
   );
 }
@@ -25,13 +21,9 @@ function MyText({ address }) {
 function App(props) {
   const [address, setAddress] = useState("");
 
-  function handleInputChange(text) {
-    setAddress(text);
-  }
-
   return (
     <div>
-      <MyInput address={address} onChange={handleInputChange} />
+      <MyInput address={address} onChange={(text) => setAddress(text)} />
       <MyText address={address} />
     </div>
   );
