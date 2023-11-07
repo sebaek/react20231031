@@ -23,7 +23,7 @@ function App(props) {
   // 1. context 만들기 : createContext();
   // 2. context에 state 넣기
   //    : <Context.Provider value={state}></Context.Provider>
-  // 3. tree안에 context사용하기
+  // 3. tree안에 context사용하기 : useContext(Context)
 
   return (
     <div>
