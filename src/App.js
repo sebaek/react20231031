@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input, Text } from "@chakra-ui/react";
 
-function CComp() {
-  return <Text>어떤 텍스트</Text>;
+function CComp({ message }) {
+  return <Text>{message}</Text>;
 }
 
-function AComp() {
-  return <CComp />;
+function AComp({ message }) {
+  return <CComp message={message} />;
 }
 
-function DComp() {
-  return <Input />;
+function DComp({ value, onChange }) {
+  return <Input value={value} onChange={(e) => onChange(e.target.value)} />;
 }
 
-function BComp() {
-  return <DComp />;
+function BComp({ value, onChange }) {
+  return <DComp value={value} onChange={onChange} />;
 }
 
 function App(props) {
+  const [message, setMessage] = useState("");
+
   return (
     <div>
-      <AComp />
-      <BComp />
+      <AComp message={message} />
+      <BComp value={message} onChange={(value) => setMessage(value)} />
     </div>
   );
 }
