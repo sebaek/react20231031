@@ -13,7 +13,13 @@ function App(props) {
   }
 
   function handleDoneButtonClick(id) {
-    console.log(id);
+    // console.log(id);
+    // console.log(items);
+
+    updateItems((draft) => {
+      const target = draft.find((elem) => elem.id === id);
+      target.done = true;
+    });
   }
 
   return (
